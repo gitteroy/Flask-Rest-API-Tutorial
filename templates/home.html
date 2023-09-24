@@ -3,13 +3,16 @@
         <title>
             Home
         </title>
+        <link rel="stylesheet" type="text/css" href="/static/styles.css">
+
     </head>
     <body>
-        <h1>User Details</h1>
+        <h1 class="user-h1">User Details</h1>
         <ul>
             <li>Name: {{ name }}</li>
             <li>Address: {{ address }}</li>
             <li>Contact: {{ contact }}</li>
         </ul>
+        <a href="/users">Go to users list.</a>
     </body>
 </html>

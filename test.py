@@ -3,7 +3,12 @@ import requests
 BASE = "http://127.0.0.1:5000/"
 
 # PUT
-response = requests.put(BASE + "video/123", {'name':'lolol', 'views':4, 'likes':0})
+video_id = 123
+# headers = {"Content-Type":"application/json"}
+data = {'name':'lolol', 'views':4, 'likes':0}
+files = {'image': ('image.jpg', open('image.jpg', 'rb'))}
+
+response = requests.put(BASE + f"video/{video_id}", data=data, files=files)
 print(response.json())
 
 # LIST
